@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <a href="index.html" class="click_button3">home</a>
+
+    <div class="photos">
+        <button id="rosie"><img src="images/rosie.png" alt="rosie" class="pho"></button>
+        <button id="unicorn"><img src="images/unicorn.png" alt="Unicorn" class="pho"></button>
+        <button id="rock"><img id="rock" src="images/rock.png" alt="Rock" class="pho"></button>
+        <button id="paper"><img id="paper" src="images/paper.png" alt="Paper"class="pho" ></button>
+        <button id="scissor"><img id="scissor" src="images/scissors.png" alt="Scissor" class="pho"></button>
+    </div>
+
+    <h3 class="choic">computer choice : <p id="comp-c"></p> </h3>
+    
+    <div class="texts">
+        <h3 class="lostc">games lost : <p id="computer-p"></p></h3>
+        <h3 class="wonc">games won : <p id="user-p"></p></h3>
+        <h3 class="tiec">games tie : <p id="tie-s"></p></h3>
+    </div>
+    
+    <div id="divans"></div>
+
+</body>
+<script>
+    
+    let rosie = document.getElementById("rosie");
+    let unicorn = document.getElementById("unicorn");
+    let rock = document.getElementById("rock");
+    let scissor = document.getElementById("scissor");
+    let user_p = document.getElementById("user-p");
+
+    let computer_p = document.getElementById("computer-p");
+    let paper = document.getElementById("paper");
+    let comp_c = document.getElementById("comp-c");
+    let divans = document.getElementById("divans");
+    let tie_pts = 0
+    let ties = document.getElementById("tie-s")
+    
+
+    function Computerchoice() {
+        const options = ['rock', 'scissors', 'rosie', 'unicorn', 'paper'];
+        const randomIndex = Math.floor(Math.random() * options.length);
+
+        let iamg = "<img src='images/" + options[randomIndex] + ".png' alt='computer choice' class='pho'>" 
+        comp_c.innerHTML = iamg;
+        
+
+        return options[randomIndex];
+    }
+
+    function disable() {
+        rock.disabled = true;
+        paper.disabled = true;
+        unicorn.disabled = true;
+        rosie.disabled = true;
+        scissor.disabled = true;
+    }
+
+    function resetGame() {
+        user_p.innerHTML = userpoints;
+        computer_p.innerHTML = computerpoints;
+        
+        
+        rock.disabled = false;
+        paper.disabled = false;
+        unicorn.disabled = false;
+        rosie.disabled = false;
+        scissor.disabled = false;
+    }
+
+    let userpoints = 0;
+    let computerpoints = 0;
+
+    function lost() {
+        computerpoints++;
+        computer_p.innerHTML = computerpoints;
+        divans.style.color = "#dd5555";
+        divans.innerHTML = "you lost";
+    }
+
+    function tie() {
+        tie_pts++;
+        ties.innerHTML = tie_pts;
+        divans.style.color = "#5555dd";
+        divans.innerHTML = "tie";
+    }
+
+    function won() {
+        userpoints++;
+        user_p.innerHTML = userpoints;
+        divans.style.color = "#55dd55";
+        divans.innerHTML = "you won";
+        divans.classList.add("won1");
+        setTimeout(() => {
+            divans.classList.remove("won1");
+        }, 3000);
+        
+
+    }
+
+    rock.onclick = () => {
+        let computer_choice = Computerchoice();
+
+        if (computer_choice === "paper") {lost();} 
+        else if (computer_choice === "rock") {tie();} 
+        else if (computer_choice === "scissors") {won();} 
+        else if (computer_choice === "unicorn") {won();} 
+        else if (computer_choice === "rosie") {lost();}
+
+        disable();
+        resetGame();
+    }
+
+    paper.onclick = () => {
+        let computer_choice = Computerchoice();
+        
+
+        if (computer_choice === "paper") {tie();} 
+        else if (computer_choice === "rock") {won();} 
+        else if (computer_choice === "scissors") {lost();} 
+        else if (computer_choice === "unicorn") {lost();} 
+        else if (computer_choice === "rosie") {won();}
+
+        disable();
+        resetGame();
+    }
+
+    unicorn.onclick = () => {
+        let computer_choice = Computerchoice();
+        
+
+        if (computer_choice === "unicorn") {tie();} 
+        else if (computer_choice === "paper") {won();} 
+        else if (computer_choice === "rock") {lost();} 
+        else if (computer_choice === "rosie") {lost();} 
+        else if (computer_choice === "scissors") {won();}
+
+        disable();
+        resetGame();
+    }
+
+    rosie.onclick = () => {
+        let computer_choice = Computerchoice();
+        
+
+        if (computer_choice === "unicorn") {won();} 
+        else if (computer_choice === "paper") {lost();} 
+        else if (computer_choice === "rock") {won();} 
+        else if (computer_choice === "rosie") {tie();} 
+        else if (computer_choice === "scissors") {lost();}
+
+        disable();
+        resetGame();
+    }
+
+    scissor.onclick = () => {
+        let computer_choice = Computerchoice();
+        
+
+        if (computer_choice === "unicorn") {lost();} 
+        else if (computer_choice === "paper") {won();} 
+        else if (computer_choice === "rock") {lost();} 
+        else if (computer_choice === "rosie") {won();} 
+        else if (computer_choice === "scissors") {tie();}
+
+        disable();
+        resetGame();
+       
+    }
+
+</script>
+</html>

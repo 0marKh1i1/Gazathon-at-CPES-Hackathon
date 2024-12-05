@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10em;
+    margin: 0;
+    background-color: #f4f4f4;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+}
+
+.menu, .visual {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    width: 300px;
+    height: 300px;
+}
+
+.visual {
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+    max-height: 800px; 
+}
+
+#burger-visual {
+    position: relative;
+    width: 100%;
+}
+
+.ingredient {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#burger-ingredients img {
+    width: 100%;
+    position: relative;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2878a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #622188;
+}
+
+.hidden {
+    display: none;
+}
+
+#receipt-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#burger-visual {
+    position: relative;
+    width: 100%;
+}
+
+.ingredient {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#burger-ingredients img {
+    width: 100%;
+    position: relative;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2878a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #622188;
+}
+
+.hidden {
+    display: none;
+}
+
+#receipt-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+@media print {
+    body {
+        height: auto;
+        width: auto;
+        padding-top: 0;
+        background-color: white;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .menu {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .visual {
+        width: 10%;
+        max-height: none;
+        overflow: visible;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .menu, .visual {
+        box-shadow: none;
+        border: none;
+    }
+
+    button {
+        display: none;
+    }
+}
