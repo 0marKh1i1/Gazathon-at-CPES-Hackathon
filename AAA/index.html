@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A* Pathfinding Simulation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #grid {
+            display: grid;
+            gap: 1px;
+            margin-top: 10px;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative; 
+        }
+        .start { background-color: green; }
+        .end { background-color: red; }
+        .obstacle { background-color: black; }
+        .path { 
+            background-color: #990000; 
+           
+            width: 20px;
+            height: 20px;
+        } 
+        .visited { 
+            background-color: lightblue; 
+            
+        }
+    </style>
+</head>
+<body>
+
+<h1>A* Pathfinding Algorithm Simulation</h1>
+
+<label for="width">Width:</label>
+<input type="number" id="width" value="10">
+<label for="height">Height:</label>
+<input type="number" id="height" value="10">
+<br>
+
+<button onclick="generateGrid()">Generate Grid</button>
+<br>
+
+<p>Click on cells to set the start, end, and obstacles.</p>
+
+<button id="start-btn" onclick="startSimulation()">Start Simulation</button>
+
+<div id="grid"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

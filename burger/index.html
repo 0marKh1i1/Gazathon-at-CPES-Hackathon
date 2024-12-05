@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Burger</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h2>Choose Your Ingredients</h2>
+            <div>
+                <label><input type="checkbox" data-item="Bun" data-price="0.5"> Bun [0.5KD]</label>
+            </div>
+            <div>
+                <label><input type="checkbox" data-item="Cheese" data-price="0.5"> Cheese [0.5KD]</label>
+            </div>
+            <div>
+                <label><input type="checkbox" data-item="Beef Patty" data-price="1"> Beef Patty [1KD]</label>
+            </div>
+            <div>
+                <label><input type="checkbox" data-item="Lettuce" data-price="0.2"> Lettuce [0.2KD]</label>
+            </div>
+            <div>
+                <label><input type="checkbox" data-item="Tomato" data-price="0.3"> Tomato [0.3KD]</label>
+            </div>
+            <button id="order-btn">Order</button>
+        </div>
+        <div class="visual">
+            <h2>Your Burger</h2>
+            <div id="burger-visual">
+                <img src="images/top bun.jpeg" alt="Top Bun" class="ingredient">
+                <div id="burger-ingredients"></div>
+                <img src="images/buttom bun.jpeg" alt="Bottom Bun" class="ingredient">
+            </div>
+        </div>
+    </div>
+    <div id="receipt-container" class="hidden">
+        <h2>Receipt</h2>
+        <p id="receipt"></p>
+    </div>
+    <button id="print-btn">Print</button>
+    
+    <script src="index.js"></script>
+</body>
+</html>

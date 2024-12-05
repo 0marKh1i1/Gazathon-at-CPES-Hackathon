@@ -1,0 +1,122 @@
+html , body {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 3vh;
+    margin: 0rem;
+    background-color: d9d9d9;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.photos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 20vh;
+}
+.pho{
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;    
+    
+}
+.texts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 10rem;
+    width: 100rem;
+    gap: 10rem;
+}
+.btn1{
+    color: black;
+    font-size: 1.5rem;
+    background-color: yellow ;
+    border-radius: 10rem;
+    padding: 1rem;
+}
+.click_button3{
+    color: black;
+    font-size: 1.5rem;
+    background-color: yellow ;
+    border-radius: 10rem;
+    padding: 1rem;
+    border: 0.15rem solid black;
+
+}
+.wonc{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    
+    color: black;
+    font-size: 1.5rem;
+    background-color: rgb(115, 252, 126) ;
+    border-radius: 10rem;
+    padding: 2rem;
+    border: 0.15rem solid black;
+}
+.tiec{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    
+    color: black;
+    font-size: 1.5rem;
+    background-color: rgb(159, 241, 255) ;
+    border-radius: 10rem;
+    padding: 2rem;
+    border: 0.15rem solid black;
+}
+.lostc{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    
+    color: black;
+    font-size: 1.5rem;
+    background-color: rgb(255, 159, 159) ;
+    border-radius: 10rem;
+    padding: 2rem;
+    border: 0.15rem solid black;
+}
+.choic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 2rem;
+}
+#divans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 2rem;
+    background-color: #f0f0f0;
+    border-radius: 10rem;
+    padding: 1rem;
+    border: 0.15rem solid black;
+}
+@keyframes winAnimation {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+   
+  }
+  
+  #divans.won1 {
+    animation: winAnimation 3s ease-in-out;
+  }

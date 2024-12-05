@@ -1,0 +1,23 @@
+html , body {
+    width: 100vw;
+    height: 100vh;
+    /* padding-top: 20rem; */
+    margin: 0rem;
+    background-color: d9d9d9;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question{
+    color: black;
+    font-size: 6vh;
+}
+.click_button{
+    color: black;
+    font-size: 10vh;
+    background-color: #ffee00;
+    border-radius: 10rem;
+}
